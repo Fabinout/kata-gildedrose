@@ -1,14 +1,14 @@
 package code.kata.gildedrose;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
 
 public class ItemTestCase {
 
-	@Test
-	public void test() {
-		assertTrue(true);
-	}
+    @Test
+    public void test() {
+        assertTrue(true);
+    }
 
 }
