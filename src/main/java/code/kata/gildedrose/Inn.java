@@ -2,6 +2,7 @@ package code.kata.gildedrose;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
 
 public class Inn {
 
@@ -79,4 +80,3 @@ public class Inn {
         new Inn().updateQuality();
     }
 }
-
