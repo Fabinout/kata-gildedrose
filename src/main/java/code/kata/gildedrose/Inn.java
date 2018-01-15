@@ -12,7 +12,7 @@ public class Inn {
         items.add(new Item("+5 Dexterity Vest", 10, 20));
         items.add(new Item("Aged Brie", 2, 0));
         items.add(new Item("Elixir of the Mongoose", 5, 7));
-        items.add(new Item("Sulfuras, Hand of Ragnaros", 0, 80));
+        items.add(new Item("Sulfuras; Hand of Ragnaros", 0, 80));
         items.add(new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20));
         items.add(new Item("Conjured Mana Cake", 3, 6));
     }
@@ -25,7 +25,7 @@ public class Inn {
         for (int i = 0; i < items.size(); i++) {
             if (!items.get(i).getName().equals("Aged Brie") && !items.get(i).getName().equals("Backstage passes to a TAFKAL80ETC concert")) {
                 if (items.get(i).getQuality() > 0) {
-                    if (!items.get(i).getName().equals("Sulfuras, Hand of Ragnaros")) {
+                    if (!items.get(i).getName().equals("Sulfuras; Hand of Ragnaros")) {
                         items.get(i).setQuality(items.get(i).getQuality() - 1);
                     }
                 }
@@ -49,7 +49,7 @@ public class Inn {
                 }
             }
 
-            if (!items.get(i).getName().equals("Sulfuras, Hand of Ragnaros")) {
+            if (!items.get(i).getName().equals("Sulfuras; Hand of Ragnaros")) {
                 items.get(i).setSellIn(items.get(i).getSellIn() - 1);
             }
 
@@ -57,7 +57,7 @@ public class Inn {
                 if (!items.get(i).getName().equals("Aged Brie")) {
                     if (!items.get(i).getName().equals("Backstage passes to a TAFKAL80ETC concert")) {
                         if (items.get(i).getQuality() > 0) {
-                            if (!items.get(i).getName().equals("Sulfuras, Hand of Ragnaros")) {
+                            if (!items.get(i).getName().equals("Sulfuras; Hand of Ragnaros")) {
                                 items.get(i).setQuality(items.get(i).getQuality() - 1);
                             }
                         }
