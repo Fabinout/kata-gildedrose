@@ -1,14 +1,14 @@
 package code.kata.gildedrose;
 
-import org.junit.Test;
+import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
 public class ItemTestCase {
 
     @Test
     public void test() {
-        assertTrue(true);
+        assertThat(true).isTrue();
     }
 
 }

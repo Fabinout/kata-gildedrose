@@ -3,11 +3,11 @@ package code.kata.gildedrose;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LegacyInn {
+public class Inn {
 
     private List<Item> items;
 
-    public LegacyInn() {
+    public Inn() {
         items = new ArrayList<Item>();
         items.add(new Item("+5 Dexterity Vest", 10, 20));
         items.add(new Item("Aged Brie", 2, 0));
@@ -76,7 +76,7 @@ public class LegacyInn {
 
     public static void main(String[] args) {
         System.out.println("OMGHAI!");
-        new LegacyInn().updateQuality();
+        new Inn().updateQuality();
     }
 }
 
