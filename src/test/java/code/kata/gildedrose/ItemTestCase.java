@@ -15,12 +15,17 @@ public class ItemTestCase {
         final LegacyInn legacyInn = new LegacyInn();
         List<Item> legacyInnItems = legacyInn.getItems();
         List<Item> innItems = inn.getItems();
-        for (int i = 0; i < legacyInnItems.size(); i++) {
-            Item legacyItem = legacyInnItems.get(i);
-            Item item = innItems.get(i);
-            assertThat(item.getName()).isEqualTo(legacyItem.getName());
-            assertThat(item.getSellIn()).isEqualTo(legacyItem.getSellIn());
-            assertThat(item.getQuality()).isEqualTo(legacyItem.getQuality());
+
+        for (int day = 0; day < 100; day++) {
+            for (int i = 0; i < legacyInnItems.size(); i++) {
+                Item legacyItem = legacyInnItems.get(i);
+                Item item = innItems.get(i);
+                assertThat(item.getName()).isEqualTo(legacyItem.getName());
+                assertThat(item.getSellIn()).isEqualTo(legacyItem.getSellIn());
+                assertThat(item.getQuality()).isEqualTo(legacyItem.getQuality());
+            }
+            inn.updateQuality();
+            legacyInn.updateQuality();
         }
     }
 }
