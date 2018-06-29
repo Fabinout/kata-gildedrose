@@ -12,7 +12,7 @@ public class ParameterizedTestCase {
 
 
     @Test
-    @FileParameters("file.csv")
+    @FileParameters("src/test/resources/parameterizedTests.csv")
     public void testUpdatedItem(String initialName, int initialSellIn, int initialQuality,
                                 String updatedName, int updatedSellIn, int updatedQuality) throws Exception {
         final Inn inn = new Inn();
