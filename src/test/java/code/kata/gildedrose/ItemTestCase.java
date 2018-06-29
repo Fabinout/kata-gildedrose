@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import java.util.List;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 public class ItemTestCase {
 
 
@@ -16,9 +18,9 @@ public class ItemTestCase {
         for (int i = 0; i < legacyInnItems.size(); i++) {
             Item legacyItem = legacyInnItems.get(i);
             Item item = innItems.get(i);
-            
+            assertThat(item.getName()).isEqualTo(legacyItem.getName());
+            assertThat(item.getSellIn()).isEqualTo(legacyItem.getSellIn());
+            assertThat(item.getQuality()).isEqualTo(legacyItem.getQuality());
         }
-
     }
-
 }
