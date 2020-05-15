@@ -1,14 +1,17 @@
 package code.kata.gildedrose;
 
-import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 
-import org.junit.Test;
+import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 public class ItemTestCase {
 
-    @Test
-    public void test() {
-        assertThat(true).isTrue();
+    @ParameterizedTest
+    @CsvFileSource(resources = "/parameterizedTests.csv", delimiter = ',')
+    public void test(String initialName, int initialSellin, int initialQuality,
+                     String finalName, int finalSellin, int finalQuality) {
+
     }
 
 }
